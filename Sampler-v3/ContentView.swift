@@ -30,7 +30,7 @@ struct ContentView: View {
                     }
                 }.toolbar(){
                     NavigationLink{
-                        ObservationInput(newObservation: $draftNewObservation).onAppear{
+                        ObservationHost(newObservation: $draftNewObservation).onAppear{
                             draftNewObservation = Observation.default
                         }
                         
@@ -41,7 +41,11 @@ struct ContentView: View {
                 }
                 .navigationTitle("Observations")
             }
-        }
+        }.onAppear {
+            print(FileManager.default.urls(
+              for: .documentDirectory,
+              in: .userDomainMask))
+          }
     }
 }
 

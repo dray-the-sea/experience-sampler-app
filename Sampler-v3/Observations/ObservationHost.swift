@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ObservationInput: View {
+struct ObservationHost: View {
     @Environment(\.editMode) var editMode
     @EnvironmentObject var modelData: ModelData
     @Binding var newObservation: Observation
@@ -43,6 +43,7 @@ struct ObservationInput: View {
                             modelData.observations[newObservation.id] = newObservation
                         }
                         
+                        
                         modelData.save()
                         
                         editMode?.animation().wrappedValue = .inactive
@@ -64,9 +65,9 @@ struct ObservationInput: View {
     
 }
 
-struct ObservationInput_Previews: PreviewProvider {
+struct ObservationHost_Previews: PreviewProvider {
     static var previews: some View {
-        ObservationInput(newObservation: .constant(Observation.default))
+        ObservationHost(newObservation: .constant(Observation.default))
             .environmentObject(ModelData())
     }
 }
