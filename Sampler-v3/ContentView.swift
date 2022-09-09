@@ -11,6 +11,7 @@ struct ContentView: View {
     @EnvironmentObject var modelData: ModelData
     @State var draftNewObservation = Observation.default
     @State var addObservation = false
+    @State private var showingProfile = false
     
     var body: some View {
         VStack{
@@ -28,24 +29,37 @@ struct ContentView: View {
                             Text(String(observation.id))
                         }
                     }
-                }.toolbar(){
+                    
                     NavigationLink{
                         ObservationHost(newObservation: $draftNewObservation).onAppear{
                             draftNewObservation = Observation.default
                         }
-                        
-                        
                     } label: {
                         Label("Add an Observation", systemImage: "plus")
                     }
+                    
+                }.toolbar(){
+                    
+                    Button{
+                        showingProfile.toggle()
+                    } label: {
+                        Label("User Profile", systemImage: "person.crop.circle")
+                    }
+                    
+                    
+                }
+                .sheet(isPresented: $showingProfile){
+                    ProfileHost()
+                        .environmentObject(modelData)
                 }
                 .navigationTitle("Observations")
+                
             }
         }.onAppear {
             print(FileManager.default.urls(
-              for: .documentDirectory,
-              in: .userDomainMask))
-          }
+                for: .documentDirectory,
+                   in: .userDomainMask))
+        }
     }
 }
 

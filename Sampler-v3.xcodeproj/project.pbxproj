@@ -18,6 +18,10 @@
 		5A1CE37228B665B500E039A5 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1CE37128B665B500E039A5 /* ModelData.swift */; };
 		5A1CE37728B6733000E039A5 /* ObservationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1CE37628B6733000E039A5 /* ObservationDetail.swift */; };
 		5A1CE37928B6797100E039A5 /* ObservationHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1CE37828B6797100E039A5 /* ObservationHost.swift */; };
+		5A22563A28CBBDCC0097BB05 /* ProfileHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A22563928CBBDCC0097BB05 /* ProfileHost.swift */; };
+		5A22563C28CBBE1F0097BB05 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A22563B28CBBE1F0097BB05 /* Profile.swift */; };
+		5A22563E28CBC0600097BB05 /* ProfileEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A22563D28CBC0600097BB05 /* ProfileEditor.swift */; };
+		5A22564028CBC0CF0097BB05 /* ProfileSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A22563F28CBC0CF0097BB05 /* ProfileSummary.swift */; };
 		5ACEFC2B28B7EBD0002ED561 /* ObservationEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACEFC2A28B7EBD0002ED561 /* ObservationEdit.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +57,10 @@
 		5A1CE37128B665B500E039A5 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		5A1CE37628B6733000E039A5 /* ObservationDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationDetail.swift; sourceTree = "<group>"; };
 		5A1CE37828B6797100E039A5 /* ObservationHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationHost.swift; sourceTree = "<group>"; };
+		5A22563928CBBDCC0097BB05 /* ProfileHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHost.swift; sourceTree = "<group>"; };
+		5A22563B28CBBE1F0097BB05 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		5A22563D28CBC0600097BB05 /* ProfileEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditor.swift; sourceTree = "<group>"; };
+		5A22563F28CBC0CF0097BB05 /* ProfileSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSummary.swift; sourceTree = "<group>"; };
 		5ACEFC2A28B7EBD0002ED561 /* ObservationEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationEdit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +112,7 @@
 		5A1CE34328B6654600E039A5 /* Sampler-v3 */ = {
 			isa = PBXGroup;
 			children = (
+				5A22563828CBBDA40097BB05 /* UserProfile */,
 				5A1CE37528B672FD00E039A5 /* Observations */,
 				5A1CE36E28B6657D00E039A5 /* Data */,
 				5A1CE34428B6654600E039A5 /* Sampler_v3App.swift */,
@@ -144,6 +153,7 @@
 			children = (
 				5A1CE36F28B6659200E039A5 /* Observation.swift */,
 				5A1CE37128B665B500E039A5 /* ModelData.swift */,
+				5A22563B28CBBE1F0097BB05 /* Profile.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -156,6 +166,16 @@
 				5ACEFC2A28B7EBD0002ED561 /* ObservationEdit.swift */,
 			);
 			path = Observations;
+			sourceTree = "<group>";
+		};
+		5A22563828CBBDA40097BB05 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				5A22563928CBBDCC0097BB05 /* ProfileHost.swift */,
+				5A22563D28CBC0600097BB05 /* ProfileEditor.swift */,
+				5A22563F28CBC0CF0097BB05 /* ProfileSummary.swift */,
+			);
+			path = UserProfile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,11 +310,15 @@
 			files = (
 				5A1CE34728B6654600E039A5 /* ContentView.swift in Sources */,
 				5A1CE37228B665B500E039A5 /* ModelData.swift in Sources */,
+				5A22563E28CBC0600097BB05 /* ProfileEditor.swift in Sources */,
 				5A1CE37728B6733000E039A5 /* ObservationDetail.swift in Sources */,
 				5A1CE37028B6659200E039A5 /* Observation.swift in Sources */,
 				5A1CE34528B6654600E039A5 /* Sampler_v3App.swift in Sources */,
 				5ACEFC2B28B7EBD0002ED561 /* ObservationEdit.swift in Sources */,
+				5A22563A28CBBDCC0097BB05 /* ProfileHost.swift in Sources */,
 				5A1CE37928B6797100E039A5 /* ObservationHost.swift in Sources */,
+				5A22563C28CBBE1F0097BB05 /* Profile.swift in Sources */,
+				5A22564028CBC0CF0097BB05 /* ProfileSummary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
