@@ -10,10 +10,10 @@ import Combine
 
 final class ModelData: ObservableObject {
     @Published var observations: [Observation] = load(filename: "Observations.json")
+    @Published var profile: Profile = Profile.default
     
     func save() {
-        
-        
+    
         guard let dataURL = getURL() else {
             fatalError("Error retrieving URL where data should be saved. ")
         }

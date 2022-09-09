@@ -32,6 +32,7 @@ struct Observation: Hashable, Codable, Identifiable {
         case conflicted = "Conflicted"
         case confused = "Confused"
         case curious = "Curious"
+        case defeated = "Defeated"
         case delighted = "Delighted"
         case disappointed = "Disappointed"
         case disgusted = "Disgusted"
@@ -49,6 +50,7 @@ struct Observation: Hashable, Codable, Identifiable {
         case overwhelmed = "Overwhelmed"
         case sad = "Sad"
         case surprised = "Surprised"
+        case triumphant = "Triumphant"
         case trusting = "Trusting"
         case tired = "Tired"
         
